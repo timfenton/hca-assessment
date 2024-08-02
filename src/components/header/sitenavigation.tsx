@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import QuickSearch from "../../features/search/quick-search";
+import LinkOrAnchor from "../shared/link-or-anchor";
 
 const SiteNavigation: React.FC = (): React.ReactNode => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,10 +15,10 @@ const SiteNavigation: React.FC = (): React.ReactNode => {
         <div className="relative">
             {/* Hamburger Menu Button for md and smaller screens */}
             <div className="flex items-center justify-between md:hidden mx-3 text-white text-base space-x-3">
-                <a href="/">
+                <LinkOrAnchor routeOrLink="/" aria-label="Home">
                     <FontAwesomeIcon icon={faHouse} />
-                </a>
-                <button onClick={toggleMenu} className="text-white focus:outline-none">
+                </LinkOrAnchor>
+                <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Open Menu">
                     <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
                 </button>
             </div>
@@ -28,79 +29,79 @@ const SiteNavigation: React.FC = (): React.ReactNode => {
                     isMenuOpen ? "translate-x-0" : "-translate-x-full"
                 } transition-transform duration-300 ease-in-out z-50`}
             >
-                <div className="flex flex-col items-start space-y-5 p-5">
-                    <a href="/" className="text-lg">
+                <div className="flex flex-col items-start space-y-5 p-5 text-lg">
+                    <LinkOrAnchor routeOrLink="/" aria-label="Home">
                         <FontAwesomeIcon icon={faHouse} /> Home
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/my-health">
                         My Health Resources
-                    </a>
-                    <a href="/contact" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/specialties">
                         Specialties
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/locations">
                         Locations
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/patients-and-visitors">
                         Patients & Visitors
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/careers">
                         Careers
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/about">
                         About Us
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/find-a-doctor">
                         Find A Doctor
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/manage">
                         Manage Your Account
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/my-health-one">
                         MyHealthOne
-                    </a>
-                    <a href="/#" className="text-lg">
+                    </LinkOrAnchor>
+                    <LinkOrAnchor routeOrLink="/more">
                         ...
-                    </a>
+                    </LinkOrAnchor>
                     <QuickSearch className="w-full rounded-sm overflow-hidden mt-3" />
                 </div>
             </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-5 mx-3 text-white text-base">
-                <a href="/">
+                <LinkOrAnchor routeOrLink="/" aria-label="Home">
                     <FontAwesomeIcon icon={faHouse} />
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/my-health">
                     My Health Resources
-                </a>
-                <a href="/contact">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/specialties">
                     Specialties
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/locations">
                     Locations
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/patients-and-visitors">
                     Patients & Visitors
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/careers">
                     Careers
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/about">
                     About Us
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/find-a-doctor">
                     Find A Doctor
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/manage">
                     Manage Your Account
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/my-health-one">
                     MyHealthOne
-                </a>
-                <a href="/#">
+                </LinkOrAnchor>
+                <LinkOrAnchor routeOrLink="/more">
                     ...
-                </a>
+                </LinkOrAnchor>
                 <QuickSearch className="w-24 rounded-sm overflow-hidden" />
             </div>
         </div>

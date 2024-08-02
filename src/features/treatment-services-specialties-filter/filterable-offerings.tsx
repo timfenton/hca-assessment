@@ -49,13 +49,15 @@ const FilterableOfferings: React.FC = (): React.ReactElement => {
 
   return (
     <div className="flex flex-col space-y-5 items-center bg-white">
-      <div className="flex flex-row w-11/12 sm:w-1/2 items-center space-x-3 justify-evenly text-xl mt-6 flex-wrap">
+      <div className="flex flex-row w-11/12 sm:w-1/2 items-center space-x-3 justify-evenly text-xl mt-6 flex-wrap" aria-label="Alphabetical Filter" role="group">
         {[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '#'].map((char) => (
           <button
             key={char}
             onClick={() => setFilter(char)}
             disabled={!groupedData[char]}
             className="text-hca-link-active disabled:text-gray-300"
+            role="button"
+            aria-pressed={filter === char}
           >
             {char}
           </button>

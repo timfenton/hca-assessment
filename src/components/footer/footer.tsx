@@ -30,9 +30,9 @@ const SiteFooter: React.FC = (): React.ReactNode => {
                     <div className="flex flex-col mt-8 w-1/3 md:w-1/4" >
                         <span>Follow Us</span>
                         <div className="flex flex-col md:flex-row my-5 text-4xl space-y-2 md:space-y-0 md:space-x-3">
-                            <LinkOrAnchor routeOrLink="#"><FontAwesomeIcon icon={faFacebook} /></LinkOrAnchor>
-                            <LinkOrAnchor routeOrLink="#"><FontAwesomeIcon icon={faInstagram} /></LinkOrAnchor>
-                            <LinkOrAnchor routeOrLink="#"><FontAwesomeIcon icon={faTwitter} /></LinkOrAnchor>
+                            <LinkOrAnchor routeOrLink="#" ariaLabel="Facebook"><FontAwesomeIcon icon={faFacebook} /></LinkOrAnchor>
+                            <LinkOrAnchor routeOrLink="#" ariaLabel="Instagram"><FontAwesomeIcon icon={faInstagram} /></LinkOrAnchor>
+                            <LinkOrAnchor routeOrLink="#" ariaLabel="Twitter"><FontAwesomeIcon icon={faTwitter} /></LinkOrAnchor>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const SiteFooter: React.FC = (): React.ReactNode => {
             <div className="flex flex-row justify-center w-full bg-zinc-900 relative text-white">
             <div className="flex flex-row w-11/12 md:w-1/2 p-5">
                 <div className="flex flex-col w-1/3" >
-                    <span className="text-xs text-gray-400">Copyright 1999-2021 <LinkOrAnchor routeOrLink="#" className="text-white">C-HCA, Inc.</LinkOrAnchor>; All rights reserved.</span>
+                    <span className="text-xs text-gray-400">Copyright 1999-2021 <LinkOrAnchor routeOrLink="#" className="text-white underline">C-HCA, Inc.</LinkOrAnchor>; All rights reserved.</span>
                 </div>
                 <div className="relative w-2/3 text-xs whitespace-pre-wrap text-right">
                     <LinkOrAnchor routeOrLink="#">Notice of Privacy Practices</LinkOrAnchor> | &nbsp;

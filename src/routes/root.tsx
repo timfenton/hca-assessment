@@ -8,7 +8,9 @@ const RootLayout: React.FC = (): React.ReactNode => {
         <div className="flex flex-col flex-shrink-0 items-center">
             <SiteHeader />
             <SiteBanner />
-            <Outlet />
+            <div id="content" className="w-full">
+                <Outlet />
+            </div>
             <SiteFooter />
         </div>
     );
