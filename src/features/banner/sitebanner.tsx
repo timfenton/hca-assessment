@@ -7,18 +7,20 @@ import HCAButtonAlert from "../../components/shared/buttons/hca-btn-alert";
 
 const SiteBanner: React.FC = () => {
     return (
-        <div className="bg-white p-3 flex justify-between items-center w-full text-base h-16 space-x-4  ">
+        <div className="bg-white p-3 flex flex-col md:flex-row justify-between items-center w-full text-base h-auto space-y-4">
             <ERWaitTimes />
-            <div className="flex-grow"/>
-            <HCAButtonPrimary buttonAction={() => alert("test")} ariaLabel="Make An Appointment">
-                <FontAwesomeIcon icon={faCalendar} />
-                <span className="ml-3">Make An Appointment</span>
-            </HCAButtonPrimary>
-            <HCAButtonAlert buttonAction={() => alert("test")} ariaLabel="View alerts" className="flex justify-center space-x-3">
-                <FontAwesomeIcon icon={faWarning} className="text-hca-alert-dark text-xl top-auto bottom-auto" />
-                <span className="font-bold">Alerts</span>
-                <AlertBubble alertCount={2} />
-            </HCAButtonAlert>
+            <div className="md:flex-grow"/>
+            <div className="flex flex-row space-x-4">
+                <HCAButtonPrimary buttonAction={() => alert("test")} ariaLabel="Make An Appointment">
+                    <FontAwesomeIcon icon={faCalendar} />
+                    <span className="ml-3">Make An Appointment</span>
+                </HCAButtonPrimary>
+                <HCAButtonAlert buttonAction={() => alert("test")} ariaLabel="View alerts" className="flex justify-center md:space-x-3">
+                    <FontAwesomeIcon icon={faWarning} className="hidden md:inline text-hca-alert-dark text-xl top-auto bottom-auto" />
+                    <span className="hidden font-bold md:inline">Alerts</span>
+                    <AlertBubble alertCount={2} />
+                </HCAButtonAlert>
+            </div>
         </div>
     );
 }

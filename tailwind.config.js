@@ -5,6 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '1500px',
+      'lg': '1500px',
+    },
     extend: {
       colors: {
         "hca-accent-1": "#0a2240",

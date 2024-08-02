@@ -5,11 +5,11 @@ import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg
 
 const SiteFooter: React.FC = (): React.ReactNode => {
     return (
-        <footer>
-            <div className="flex flex-row justify-center w-full bg-white mt-10 relative">
-                <div className="flex flex-row w-1/2 p-5 text-sm space-x-20">
+        <footer className="w-full">
+            <div className="flex flex-row justify-center w-full bg-white mt-10">
+                <div className="flex flex-row w-11/12 md:w-1/2 p-5 text-sm space-x-8 md:space-x-20">
                     <div className="flex flex-col w-1/4" >
-                        <SiteLogo theme="dark" className="-translate-x-4 my-5" />
+                        <SiteLogo theme="dark" className="w-full -translate-x-4 my-5" />
                         <div className="flex flex-col my-5">
                             <span>HCA Houston Healthcare</span>
                             <span>3737 Buffalo Speedway</span>
@@ -17,9 +17,9 @@ const SiteFooter: React.FC = (): React.ReactNode => {
                             <span>Houston, TX 77098</span>
                         </div>
                     </div>
-                    <div className="flex flex-col mt-8" >
+                    <div className="flex flex-col mt-8 w-1/3 md:w-1/4" >
                         <span>About Us</span>
-                        <div className="flex flex-col my-5 underline text-slate-900 space-y-2">
+                        <div className="flex flex-col my-5 underline text-slate-900 space-y-1 md:space-y-2">
                             <LinkOrAnchor routeOrLink="#">About HCA Houston</LinkOrAnchor>
                             <LinkOrAnchor routeOrLink="#">Phone Directory</LinkOrAnchor>
                             <LinkOrAnchor routeOrLink="#">Maps & Directions</LinkOrAnchor>
@@ -27,9 +27,9 @@ const SiteFooter: React.FC = (): React.ReactNode => {
                             <LinkOrAnchor routeOrLink="#">Contact Us</LinkOrAnchor>
                         </div>
                     </div>
-                    <div className="flex flex-col mt-8" >
+                    <div className="flex flex-col mt-8 w-1/3 md:w-1/4" >
                         <span>Follow Us</span>
-                        <div className="flex flex-row my-5 text-4xl space-x-3">
+                        <div className="flex flex-col md:flex-row my-5 text-4xl space-y-2 md:space-y-0 md:space-x-3">
                             <LinkOrAnchor routeOrLink="#"><FontAwesomeIcon icon={faFacebook} /></LinkOrAnchor>
                             <LinkOrAnchor routeOrLink="#"><FontAwesomeIcon icon={faInstagram} /></LinkOrAnchor>
                             <LinkOrAnchor routeOrLink="#"><FontAwesomeIcon icon={faTwitter} /></LinkOrAnchor>
@@ -37,8 +37,8 @@ const SiteFooter: React.FC = (): React.ReactNode => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row justify-center w-full bg-zinc-900 mt-10 relative text-white">
-            <div className="flex flex-row w-1/2 p-5">
+            <div className="flex flex-row justify-center w-full bg-zinc-900 relative text-white">
+            <div className="flex flex-row w-11/12 md:w-1/2 p-5">
                 <div className="flex flex-col w-1/3" >
                     <span className="text-xs text-gray-400">Copyright 1999-2021 <LinkOrAnchor routeOrLink="#" className="text-white">C-HCA, Inc.</LinkOrAnchor>; All rights reserved.</span>
                 </div>
@@ -55,7 +55,7 @@ const SiteFooter: React.FC = (): React.ReactNode => {
                 </div> 
             </div>
         </div>
-    </footer>
+        </footer>
     );
 }
 

@@ -6,7 +6,7 @@ import FilterableOfferings from "../features/treatment-services-specialties-filt
 
 const HomePage: React.FC = ():React.ReactNode => {
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full">
         <PageTitleSection>
           <div className="flex flex-col">
             <h1>Find Care</h1>

@@ -49,7 +49,7 @@ const FilterableOfferings: React.FC = (): React.ReactElement => {
 
   return (
     <div className="flex flex-col space-y-5 items-center bg-white">
-      <div className="flex flex-row w-1/2 items-center justify-evenly text-xl mt-6">
+      <div className="flex flex-row w-11/12 sm:w-1/2 items-center space-x-3 justify-evenly text-xl mt-6 flex-wrap">
         {[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '#'].map((char) => (
           <button
             key={char}
@@ -62,7 +62,7 @@ const FilterableOfferings: React.FC = (): React.ReactElement => {
         ))}
       </div>
       <div className="flex w-full bg-gray-100 items-center justify-center">
-        <div className="flex flex-col w-1/2 bg-white p-5 shadow-xl mt-5 mb-10">
+        <div className="flex flex-col w-11/12 sm:w-1/2 bg-white p-5 shadow-xl mt-5 mb-10">
             {filter && 
                 <div className="flex justify-between items-right mb-5 w-full">
                     <HCAButtonSecondary

@@ -2,7 +2,7 @@ const PageTitleSection: React.FC<{children: React.ReactNode}> = ({children}): Re
     return (
         <div id="pageHeader" className='flex flex-row justify-center items-center w-full font-sans'>
             <div className="flex justify-center w-full h-auto bg-hca-accent-3 text-white">
-                <div className="w-1/2 p-8 flex flex-row">
+                <div className="w-11/12 md:w-1/2 p-8 flex flex-col sm:flex-row space-y-2 sm:space-y-0">
                     {children}
                 </div>
             </div>

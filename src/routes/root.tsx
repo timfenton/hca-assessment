@@ -5,14 +5,12 @@ import SiteFooter from "../components/footer/footer";
 
 const RootLayout: React.FC = (): React.ReactNode => {
     return (
-        <>
+        <div className="flex flex-col flex-shrink-0 items-center">
             <SiteHeader />
             <SiteBanner />
-            <div className="min-h-screen">
-                <Outlet />
-            </div>
+            <Outlet />
             <SiteFooter />
-        </>
+        </div>
     );
 }
 
