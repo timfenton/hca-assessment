@@ -1,6 +1,7 @@
 {
   "name": "hca-assessment",
-  "private": true,
+  "private": false,
+  "homepage": "https://timfenton.github.io/hca-assessment",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

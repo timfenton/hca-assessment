@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import HomePage from './routes/home.tsx'
 
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ import './index.css'
 import RootLayout from './routes/root.tsx'
 import ErrorPage from './error-page.tsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,
